@@ -37,7 +37,7 @@ class Pm2 {
     }
 
     public function startName(string $name = null): bool {
-        return !is_null($this->runCommand('start' . "\"{$name}\""));
+        return !is_null($this->runCommand('start ' . "{$name}"));
     }
 
     public function findBy(string $key, string $value): ?Process {
